@@ -24,7 +24,7 @@ if (isset($_POST['hist_id'])) {
 
 $sql = "SELECT h.hist_id, h.hist_motv, h.hist_recom, p.pac_nombre,p.pac_apellido, g.gen_nombre FROM historias h
     JOIN paciente p ON h.pac_id = p.pac_id
-    JOIN generos g ON p.gen_id = g.gen_id";
+    JOIN generos g ON p.gen_id = g.gen_id ORDER BY h.hist_id ASC";
 $consultar = mysqli_query($conectar, $sql);
 
 include("pagPrincipal.php");

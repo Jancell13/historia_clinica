@@ -26,6 +26,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
         <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="formuRegistroPaciente.php">Registrar Paciente</a></li>
             <li><a class="dropdown-item" href="listarPacientes.php">Consultar Pacientes</a></li>
+            <li><a class="dropdown-item" href="listarHistorias.php">Consultar Historias</a></li>
         </ul>
     </div>
 </div>

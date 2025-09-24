@@ -4,11 +4,10 @@ $sql = "SELECT p.pac_id, p.pac_documento, p.pac_nombre, p.pac_apellido, p.pac_te
     JOIN generos g ON p.gen_id = g.gen_id
     JOIN estratos e ON p.estr_id = e.estr_id where pac_estado =1";
 $consultar = mysqli_query($conectar, $sql);
-?>
-<?php
+
 include("pagPrincipal.php");
 ?>
-<div class="container mt-3">
+<div class="container-fluid mt-3">
     <table class="table table-striped text-center">
         <thead>
             <tr>
@@ -31,8 +30,8 @@ include("pagPrincipal.php");
                     <td class="align-middle"><?php echo $filas['gen_nombre'] ?></td>
                     <td class="align-middle"><?php echo $filas['estr_nombre'] ?></td>
                     <td class="align-middle">
-                        <a class="btn btn-info" href="historiaClinica.php?id=<?php echo $filas["pac_id"] ?>">Crear Historia</a>
-                        <a class="btn btn-warning edit" href="formuEditarPaciente.php?id=<?php echo $filas["pac_id"] ?>">Editar</a>
+                        <a class="btn btn-info " href="historiaClinica.php?id=<?php echo $filas["pac_id"] ?>">Crear Historia</a>
+                        <a class="btn btn-warning edit mx-4" href="formuEditarPaciente.php?id=<?php echo $filas["pac_id"] ?>">Editar</a>
                         <a class="btn btn-danger" href="anularPaciente.php?id=<?php echo $filas["pac_id"] ?>">Anular</a>
                     </td>
                 </tr>
